@@ -21,7 +21,7 @@
  #dist {
  position: absolute;
  left: 50%;
- top: 1.7em;
+ top: 0.7em;
  transform: translate(-50%, 0%);
  -webkit-user-select: none;
     -moz-user-select: none;
