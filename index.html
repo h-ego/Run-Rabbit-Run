@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Run, Rabbit Run!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="website icon" type="png" href="RRR! icon.png">
+</head>
+<body>
+<div id="world" />
+<div id="gameoverInstructions">
+  Game Over
+</div>
+<br>
+
+<div class="all" onClick="Play()">
+  <p>MUSIC</p>
+    <div class="botón" onclick="this.classList.toggle('active')" onClick="Play()">
+        <div class="fondo" x="0" y="0" width="200" height="200"></div>
+        <div class="icono" width="200" height="200">
+          <div class="parte izquierda" x="0" y="0" width="200" height="200" fill="#fff"></div>
+          <div class="parte derecha" x="0" y="0" width="200" height="200" fill="#fff"></div>
+        </div>
+        <div class="puntero"></div>
+      </div>
+    </div>
+    <audio  id="bgsong" loop>
+      <source src="fantasy-sound.mp3" type="audio/mp3" >
+    </audio>
+
+<div id="dist">
+    <div class="label">distance</div>
+    <div id="distValue">000</div>
+</div>
+
+<div id="credits">
+  		<div class="by">by h-ego</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r80/three.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/OrbitControls.js'></script><script  src="script.js"></script>
+<script>
+  function Play()
+  {
+    var myAudio = document.getElementById("bgsong");
+    if(myAudio.paused) {
+        myAudio.play();
+    }
+    else {
+       myAudio.pause();
+    }
+  }
+</script>
+</body>
+</html>
